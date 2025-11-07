@@ -104,10 +104,13 @@ Version Control	Git, GitHub
 Walmart_Store_Sales_Forecasting/
 
 ├── 📁 data/ # Raw and processed datasets
-│ ├── train.csv # Training dataset
-│ ├── test.csv # Testing dataset
-│ ├── features.csv # Additional store and markdown features
-│ └── stores.csv # Store metadata and details
+│    ├── train.csv # Training dataset
+
+│    ├── test.csv # Testing dataset
+
+│    ├── features.csv # Additional store and markdown features
+
+│    └── stores.csv # Store metadata and details
 
 ├── 📁 notebooks/ # Jupyter notebooks for experimentation
 │ ├── EDA.ipynb # Exploratory Data Analysis

@@ -1,110 +1,92 @@
-# wallmart_store_project
-To build a machine learning model that can accurately forecast weekly sales for every store + department combination.  This helps Walmart:  Plan inventory (how much stock to order),  Adjust staffing levels,  Schedule markdowns (discounts) more effectively,  And improve profits during holidays and special events.
+🛒 Walmart Store Sales Forecasting
+📌 Overview
 
+The Walmart Store Sales Forecasting project aims to predict weekly sales for various Walmart stores based on historical data, markdown events, and seasonal patterns.
+This project demonstrates an end-to-end data science pipeline, from data preprocessing and feature engineering to model deployment and visualization.
 
-### 📊 Predicting Weekly Sales for Walmart Stores using Machine Learning
+🎯 Objectives
 
----
+Analyze Walmart’s historical sales data.
 
-## 📘 Project Overview
+Identify factors affecting sales (holidays, markdowns, departments).
 
-This project aims to **forecast weekly sales** for 45 Walmart stores across various departments using historical sales data.  
-It is inspired by the **Walmart Recruiting - Store Sales Forecasting competition on Kaggle**, where the goal was to predict the impact of **markdown events and holidays** on store sales.
+Build and train machine learning models to forecast sales.
 
-Accurate sales forecasting helps Walmart:
-- Optimize inventory management 🏬  
-- Schedule staff efficiently 👥  
-- Plan promotional markdowns effectively 💸  
-- Improve customer satisfaction 😊  
+Create a Power BI dashboard for interactive business insights.
 
----
+Deploy an interactive web app using Streamlit Cloud for live predictions.
 
-## 🎯 Problem Statement
+🧠 Project Workflow
+1️⃣ Data Understanding & Preprocessing
 
-Walmart needs to **predict future weekly sales** for each store and department.  
-The challenge lies in:
-- Limited historical data (few years only)
-- Impact of **holiday events** like Christmas, Thanksgiving, etc.
-- Effects of **markdowns (discounts)** on specific departments
+Loaded and explored the datasets: train.csv, test.csv, features.csv, and stores.csv.
 
----
+Cleaned missing values, normalized markdown fields, and formatted date columns.
 
-## 🧠 Objective
+Engineered new features:
 
-Build a **machine learning model** that predicts the `Weekly_Sales` for each `(Store, Department, Date)` combination  
-and evaluate it using **Weighted Mean Absolute Error (WMAE)**, where holiday weeks are given higher importance.
+Month, Year, WeekOfYear
 
----
+IsHoliday flag
 
-## 🧾 Dataset Information
+Rolling averages and lagged sales for trend capture.
 
-The dataset consists of historical sales data from **45 Walmart stores** located in different regions.  
-Each store contains multiple departments and several influencing factors.
+2️⃣ Exploratory Data Analysis (EDA)
 
-| Feature | Description |
-|----------|--------------|
-| **Store** | Store ID number |
-| **Dept** | Department number |
-| **Date** | Week of sales |
-| **Weekly_Sales** | Total sales for the department in that week *(Target)* |
-| **IsHoliday** | Boolean: whether the week includes a holiday |
-| **Temperature** | Average temperature in the region |
-| **Fuel_Price** | Cost of fuel in the region |
-| **CPI** | Consumer Price Index |
-| **Unemployment** | Unemployment rate in the region |
-| **Markdown1–5** | Promotional discounts applied |
+Analyzed weekly sales trends across stores and departments.
 
----
+Visualized markdown impacts on holiday and non-holiday sales.
 
-## ⚙️ Evaluation Metric
+Observed seasonal spikes during Christmas, Thanksgiving, and Labor Day.
 
-The competition uses **Weighted Mean Absolute Error (WMAE)**:
+3️⃣ Model Building
 
-\[
-WMAE = \frac{\sum_{i=1}^{n} w_i \times |y_i - \hat{y}_i|}{\sum_{i=1}^{n} w_i}
-\]
+Trained and compared multiple regression models:
 
-Where:  
-- \(y_i\): Actual sales  
-- \(\hat{y}_i\): Predicted sales  
-- \(w_i\): Weight (5 for holiday weeks, 1 otherwise)
+Linear Regression (Baseline)
 
----
+Random Forest Regressor
 
-## 🧩 Project Workflow
+XGBoost Regressor
 
-### 1️⃣ Data Collection
-- Downloaded dataset from [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting)
+LightGBM
 
-### 2️⃣ Data Preprocessing
-- Handled missing values in Markdown columns  
-- Converted `Date` column to datetime format  
-- Created new features like `Year`, `Month`, `WeekOfYear`, and `IsHoliday (0/1)`  
-- Normalized numerical features
+Evaluated models using Root Mean Squared Error (RMSE).
 
-### 3️⃣ Exploratory Data Analysis (EDA)
-- Visualized sales trends using Matplotlib and Seaborn  
-- Compared sales during holiday vs. non-holiday weeks  
-- Analyzed correlation between markdowns and sales  
-- Checked store and department performance patterns
+Tuned hyperparameters using GridSearchCV.
 
-### 4️⃣ Feature Engineering
-- Created lag features (e.g., previous week’s sales)
-- Added interaction features like `Markdown × Holiday`
-- Encoded categorical variables if needed
+Final model: XGBoost (best balance of accuracy and interpretability).
 
-### 5️⃣ Model Building
-Implemented and compared several regression models:
-- Linear Regression  
-- Random Forest Regressor  
-- XGBoost Regressor  
-- LightGBM (optional advanced model)
+4️⃣ Power BI Dashboard
 
-### 6️⃣ Model Evaluation
-- Used **Weighted MAE** for evaluation  
-- Performed hyperparameter tuning using GridSearchCV  
-- Compared model performances and selected the best one
+Created an interactive Power BI dashboard to visualize:
 
-### 7️⃣ Prediction & Submission
-- Predicted weekly sales for test data  
-- Created submission file in the format:
+Store-wise weekly sales distribution
+
+Department performance analysis
+
+Holiday impact vs. Normal weeks
+
+Markdown event contribution to sales growth
+
+Time-series trends with filters and slicers
+
+5️⃣ Streamlit Web App Deployment
+
+Built an interactive web app where users can:
+
+Select Store ID, Department, and Week
+
+Get predicted weekly sales
+
+View visualizations (sales trend, markdown effect)
+
+Deployed on Streamlit Cloud for public access.
+
+🛠️ Tools & Technologies
+Category	Tools Used
+Programming	Python, Pandas, NumPy, Scikit-learn, XGBoost
+Visualization	Matplotlib, Seaborn, Power BI
+Deployment	Streamlit, Streamlit Cloud
+Documentation	Jupyter Notebook, Markdown
+Version Control	Git, GitHub

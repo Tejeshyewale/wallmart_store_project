@@ -90,3 +90,61 @@ Visualization	Matplotlib, Seaborn, Power BI
 Deployment	Streamlit, Streamlit Cloud
 Documentation	Jupyter Notebook, Markdown
 Version Control	Git, GitHub
+
+📊 Power BI Dashboard Snapshot
+
+(Include screenshots here when ready — e.g. store sales heatmap, markdown vs. sales chart.)
+
+🌐 Streamlit Web App
+
+📍 Live Demo: [Add Streamlit Cloud Link Here]
+📁 GitHub Repository: [Add GitHub Link Here]
+
+🧩 Folder Structure
+Walmart_Store_Sales_Forecasting/
+│
+├── data/
+│   ├── train.csv
+│   ├── test.csv
+│   ├── features.csv
+│   └── stores.csv
+│
+├── notebooks/
+│   ├── EDA.ipynb
+│   ├── Model_Training.ipynb
+│
+├── app/
+│   ├── model.pkl
+│   ├── app.py
+│
+├── dashboard/
+│   ├── PowerBI_Report.pbix
+│
+├── README.md
+└── requirements.txt
+
+
+| Phase  | Description                                           | Duration |
+| ------ | ----------------------------------------------------- | -------- |
+| Week 1 | Data understanding, cleaning, and feature engineering | 7 days   |
+| Week 2 | Model training, tuning, and evaluation                | 7 days   |
+| Week 3 | Power BI dashboard creation and publishing            | 7 days   |
+| Week 4 | Streamlit app development and deployment              | 7 days   |
+
+
+✅ Final Deliverables
+
+📂 Cleaned dataset
+
+🧠 Trained ML model (XGBoost)
+
+📊 Power BI Dashboard
+
+🌐 Streamlit Web App
+
+📘 Project Report + README Documentation
+
+🧾 References
+
+Kaggle: Walmart Recruiting - Store Sales Forecasting
+Walmart dataset metadata and documentation

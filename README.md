@@ -104,7 +104,8 @@ Version Control	Git, GitHub
 Walmart_Store_Sales_Forecasting/
 
 ├── 📁 data/ # Raw and processed datasets
-│    ├── train.csv # Training dataset
+│   
+    ├── train.csv # Training dataset
 
 │    ├── test.csv # Testing dataset
 
@@ -113,16 +114,22 @@ Walmart_Store_Sales_Forecasting/
 │    └── stores.csv # Store metadata and details
 
 ├── 📁 notebooks/ # Jupyter notebooks for experimentation
-│ ├── EDA.ipynb # Exploratory Data Analysis
-│ ├── Model_Training.ipynb # Model building and evaluation
+
+│    ├── EDA.ipynb # Exploratory Data Analysis
+
+│    ├── Model_Training.ipynb # Model building and evaluation
 
 ├── 📁 app/ # Streamlit app files
-│ ├── app.py # Main Streamlit application
-│ ├── model.pkl # Saved trained model (serialized)
-│ └── utils.py # Helper functions (if any)
+
+│    ├── app.py # Main Streamlit application
+
+│    ├── model.pkl # Saved trained model (serialized)
+
+│    └── utils.py # Helper functions (if any)
 
 ├── 📁 dashboard/ # Power BI assets
-│ └── PowerBI_Report.pbix # Power BI report file
+
+│    └── PowerBI_Report.pbix # Power BI report file
 
 ├── 📄 README.md # Project overview and documentation
 ├── 📄 requirements.txt # Python dependencies

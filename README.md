@@ -132,7 +132,9 @@ Walmart_Store_Sales_Forecasting/
 │    └── PowerBI_Report.pbix # Power BI report file
 
 ├── 📄 README.md # Project overview and documentation
+
 ├── 📄 requirements.txt # Python dependencies
+
 └── 📄 Walmart_Store_Sales_Forecasting_Schedule.docx # Project plan document
 
 

@@ -103,25 +103,28 @@ Version Control	Git, GitHub
 🧩 Folder Structure
 Walmart_Store_Sales_Forecasting/
 │
-├── data/
-│   ├── train.csv
-│   ├── test.csv
-│   ├── features.csv
-│   └── stores.csv
+├── 📁 data/                          # Raw and processed datasets
+│   ├── train.csv                     # Training dataset
+│   ├── test.csv                      # Testing dataset
+│   ├── features.csv                  # Additional store and markdown features
+│   └── stores.csv                    # Store metadata and details
 │
-├── notebooks/
-│   ├── EDA.ipynb
-│   ├── Model_Training.ipynb
+├── 📁 notebooks/                     # Jupyter notebooks for experimentation
+│   ├── EDA.ipynb                     # Exploratory Data Analysis
+│   ├── Model_Training.ipynb          # Model building and evaluation
 │
-├── app/
-│   ├── model.pkl
-│   ├── app.py
+├── 📁 app/                           # Streamlit app files
+│   ├── app.py                        # Main Streamlit application
+│   ├── model.pkl                     # Saved trained model (serialized)
+│   └── utils.py                      # Helper functions (if any)
 │
-├── dashboard/
-│   ├── PowerBI_Report.pbix
+├── 📁 dashboard/                     # Power BI assets
+│   └── PowerBI_Report.pbix           # Power BI report file
 │
-├── README.md
-└── requirements.txt
+├── 📄 README.md                      # Project overview and documentation
+├── 📄 requirements.txt               # Python dependencies
+└── 📄 Walmart_Store_Sales_Forecasting_Schedule.docx  # Project plan document
+
 
 
 | Phase  | Description                                           | Duration |
